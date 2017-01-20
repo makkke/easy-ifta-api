@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  easy-ifta-api:
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  easy-ifta-test:
+    build: .
+    volumes:
+      - $HOME/.ssh:/root/.ssh:ro
+    environment:
+      - GITHUB_RELEASE_ACCESS_TOKEN
+    depends_on:
+      - easy-ifta-api
