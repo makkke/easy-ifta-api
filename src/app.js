@@ -9,7 +9,7 @@ import helmet from 'helmet'
 
 import routes from './routes'
 import { APIValidationError, mapAPIErrorToJson, APIError } from './utils/APIError'
-import './passport'
+// import './passport'
 
 const app = new Express()
 

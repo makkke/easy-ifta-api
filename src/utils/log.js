@@ -1,5 +1,3 @@
 import bunyan from 'bunyan'
 
-const log = bunyan.createLogger({ name: 'cart-inventory-api' })
-
-export default log
+export default bunyan.createLogger({ name: 'easy-ifta-api' })
